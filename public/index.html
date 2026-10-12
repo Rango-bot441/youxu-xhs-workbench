@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#204b3c">
+  <title>有序 · 小红书文字工作台</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">跳到内容</a>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="有序文字工作台首页"><span class="brand-mark">序</span><span>有序<small>在线教育 · 文字工作台</small></span></a>
+    <button class="connection" id="provider-status" type="button" data-action="check-provider">模型连接未检查</button>
+  </header>
+  <div class="shell">
+    <aside class="navigation" aria-label="主要导航">
+      <div class="nav-caption">我的写作空间</div>
+      <nav>
+        <button type="button" data-view="topics" class="nav-item active"><span>01</span>新建 / 继续写作</button>
+        <button type="button" data-view="workbench" class="nav-item"><span>02</span>内容工作台</button>
+        <button type="button" data-view="history" class="nav-item"><span>03</span>历史记录</button>
+      </nav>
+      <button type="button" id="open-settings" class="settings-link">账号管理 <span>↗</span></button>
+      <button type="button" id="open-models" class="settings-link">模型选择 <span>↗</span></button>
+      <div class="side-note">从自己的想法出发。<br>让每一次修改都有依据。</div>
+      <div class="local-label"><span class="status-dot"></span>本地个人工作台</div>
+    </aside>
+    <main id="main" tabindex="-1"><div class="empty">正在读取你的写作空间…</div></main>
+  </div>
+  <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+  <dialog id="settings-dialog" aria-labelledby="settings-title">
+    <div class="dialog-header"><div><span class="eyebrow">账号</span><h2 id="settings-title">账号管理</h2></div><button type="button" class="icon-button" id="close-settings" aria-label="关闭账号管理">×</button></div>
+    <div id="settings-content"></div>
+  </dialog>
+  <dialog id="models-dialog" aria-labelledby="models-title">
+    <div class="dialog-header"><div><span class="eyebrow">模型</span><h2 id="models-title">模型选择</h2></div><button type="button" class="icon-button" id="close-models" aria-label="关闭模型选择">×</button></div>
+    <div id="models-content"></div>
+  </dialog>
+  <script src="/app.js" defer></script>
+</body>
+</html>
